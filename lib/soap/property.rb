@@ -318,9 +318,8 @@ end
 
 end
 
-
 # for ruby/1.6.
-unless Enumerable.instance_methods.include?('inject')
+unless Enumerable.method_defined?('inject') 
   module Enumerable
     def inject(init)
       result = init
